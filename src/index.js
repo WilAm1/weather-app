@@ -27,9 +27,7 @@ async function getWeather(location) {
   };
 }
 
-// TODO Set a simple form that take an input
 const form = document.querySelector("form");
-
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const location = form["loc-input"].value;
@@ -37,8 +35,6 @@ form.addEventListener("submit", async (e) => {
   if (data) {
     renderData.success(data);
   } else {
-    renderData.error();
+    renderData.error(location);
   }
 });
-
-// TODO Style it! (Kinda long)

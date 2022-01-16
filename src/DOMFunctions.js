@@ -1,9 +1,10 @@
-// TODO display the information
+// * displays the information
 
 export default {
   main: document.querySelector("div#weather-wrapper"),
-  renderError() {
+  renderError(invalidLocation) {
     this.main.innerHTML = `
+      <p>Entered value "${invalidLocation}"</p>
       <div>No Data. Please try again </div>`;
   },
   renderWeather(data) {
