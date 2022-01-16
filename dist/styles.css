@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  background-color: rgb(13, 75, 207);
+  background: url(./bg-img.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  width: 80vw;
+  position: relative;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+#weather-wrapper {
+  width: 60%;
+  color: white;
+}
+
+form {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+}
+input {
+}
+footer {
+  background-color: aliceblue;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+}
+
+/* * STYLES */
+h1 {
+  font-size: 5em;
+}
+
+.desc {
+  display: flex;
+}
+.border {
+  border-right: 2px solid white;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+.temp {
+  /* * Prevents sub/sup affecting the line height */
+  /* More info here https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+}
+#weather-wrapper {
+  font-size: 1.2em;
+}
